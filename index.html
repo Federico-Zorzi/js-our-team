@@ -78,17 +78,12 @@
               type="text"
               class="form-control"
               id="card-fullname"
-              value="Federico"
+              required
             />
           </div>
           <div class="col">
             <label for="role" class="form-label">Role</label>
-            <input
-              type="text"
-              class="form-control"
-              id="card-role"
-              value="Studente"
-            />
+            <input type="text" class="form-control" id="card-role" required />
           </div>
 
           <div class="col">
@@ -97,12 +92,13 @@
               type="email"
               class="form-control"
               id="card-email"
-              value="federico@gmail.com"
+              required
+              s
             />
           </div>
 
           <div class="col">
-            <label for="card-image" class="form-label">Image</label>
+            <label for="card-image" class="form-label" requireds>Image</label>
             <input
               type="text"
               class="form-control"
@@ -112,7 +108,7 @@
           </div>
         </div>
 
-        <button class="btn btn-success my-3">Aggiungi membro</button>
+        <button type="submit" class="btn btn-success my-3">Add Member</button>
       </form>
     </div>
 

@@ -37,14 +37,15 @@ const teamMembers = [
   },
 ];
 
-// * raccolgo gli elementi dal HTML
+// * grid per aggiungere le card
 const gridTeamEl = document.getElementById("grid-team");
 
+// * elementi per aggiungere nuova card
 const fullnameEl = document.getElementById("card-fullname");
 const roleEl = document.getElementById("card-role");
 const emailEl = document.getElementById("card-email");
 const imageEl = document.getElementById("card-image");
-const addMemberEl = document.getElementById("add-member");
+const addMemberBtn = document.getElementById("add-member");
 
 const textUpperCase = (text) => {
   let newText = text.toUpperCase();
@@ -56,7 +57,7 @@ const printCard = (name, role, email, image) => {
     <div class="col">
       <div class="card">
         <div class="row g-0 text-light bg-black h-100">
-          <div class="col-md-4">
+          <div class="col-md-4 text-center">
             <img src="./${image}" class="img-fluid" alt="${name} - ${role}" />
           </div>
           <div class="col-md-8">
@@ -99,7 +100,7 @@ const addMember = () => {
 
 addCard();
 
-addMemberEl.addEventListener("submit", (e) => {
+addMemberBtn.addEventListener("submit", (e) => {
   e.preventDefault();
   addMember();
   addCard();
